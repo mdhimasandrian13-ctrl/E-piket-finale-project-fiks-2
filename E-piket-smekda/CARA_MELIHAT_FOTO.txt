@@ -1,0 +1,44 @@
+=====================================
+CARA MELIHAT FOTO ABSENSI
+=====================================
+
+1. UPDATE DATABASE DULU!
+   Jalankan query ini di phpMyAdmin:
+   
+   ALTER TABLE `attendances` ADD COLUMN `photo_path` VARCHAR(255) NULL AFTER `notes`;
+
+2. UNTUK ADMIN:
+   Cara 1 (Via Menu):
+   - Login sebagai admin
+   - Klik menu "Foto Absensi" di sidebar
+   - Pilih tanggal/kelas/status (opsional)
+   - Klik Filter
+   - Klik foto untuk zoom
+   
+   Cara 2 (Via URL):
+   - Buka: http://localhost/E-piket-smekda/admin/detail-absensi.php
+
+3. UNTUK GURU:
+   Cara 1 (Via Menu):
+   - Login sebagai guru
+   - Klik menu "Foto Absensi" di sidebar
+   - Pilih tanggal/kelas/status (opsional)
+   - Klik Filter
+   - Klik foto untuk zoom
+   
+   Cara 2 (Via URL):
+   - Buka: http://localhost/E-piket-smekda/guru/detail-absensi.php
+
+4. UNTUK SISWA:
+   - Login sebagai siswa
+   - Buka: Absensi Hadir
+   - Upload foto (opsional) saat absensi
+   - Foto akan tersimpan dan bisa dilihat admin/guru
+
+CATATAN:
+- Foto disimpan di folder: uploads/attendance/
+- Format: JPG, PNG (max 5MB)
+- Upload foto bersifat OPSIONAL
+- Foto lama (sebelum update) akan tampil "Tidak ada foto"
+
+=====================================

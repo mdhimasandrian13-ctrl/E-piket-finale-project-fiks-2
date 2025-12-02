@@ -1,0 +1,198 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║                    🎉 SELAMAT DATANG DI                              ║
+║                    E-PIKET SMEKDA v1.1.0                             ║
+║                                                                       ║
+║         Sistem Manajemen Absensi Piket Siswa Berbasis Web            ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 📖 BACA FILE INI TERLEBIH DAHULU!                                    │
+└───────────────────────────────────────────────────────────────────────┘
+
+File ini adalah panduan singkat untuk memulai menggunakan E-Piket SMEKDA.
+Untuk dokumentasi lengkap, lihat file-file lainnya.
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 🚀 INSTALASI CEPAT (5 MENIT)                                          │
+└───────────────────────────────────────────────────────────────────────┘
+
+LANGKAH 1: Setup XAMPP
+----------------------
+1. Download & Install XAMPP
+2. Copy folder E-piket-smekda ke C:\xampp\htdocs\
+3. Start Apache & MySQL di XAMPP Control Panel
+
+LANGKAH 2: Setup Database
+-------------------------
+1. Buka http://localhost/phpmyadmin
+2. Buat database baru: epiket_smekda
+3. Import file: epiket_smekda.sql
+4. PENTING! Jalankan query ini:
+   
+   ALTER TABLE `attendances` 
+   ADD COLUMN `photo_path` VARCHAR(255) NULL AFTER `notes`;
+
+LANGKAH 3: Akses Aplikasi
+-------------------------
+Buka browser: http://localhost/E-piket-smekda
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 🔑 LOGIN DEFAULT                                                      │
+└───────────────────────────────────────────────────────────────────────┘
+
+Admin:  username: admin    | password: admin123
+Guru:   username: guru001  | password: guru123
+Siswa:  username: 2024001  | password: siswa123
+
+⚠️ PENTING: Ubah password default setelah login pertama!
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 🆕 FITUR BARU v1.1.0                                                  │
+└───────────────────────────────────────────────────────────────────────┘
+
+1. 📸 UPLOAD FOTO ABSENSI
+   - Siswa bisa upload foto saat absensi (opsional)
+   - Admin & Guru bisa lihat foto di menu "Foto Absensi"
+   - Format: JPG/PNG, Max: 5MB
+
+2. 📅 JADWAL MULTIPLE SISWA
+   - Admin bisa tambah banyak siswa sekaligus
+   - Contoh: Senin 5 siswa → Centang 5 siswa → Simpan (1x klik!)
+   - Tombol "Pilih Semua" dan "Batal Semua"
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 📚 DOKUMENTASI YANG TERSEDIA                                          │
+└───────────────────────────────────────────────────────────────────────┘
+
+WAJIB DIBACA:
+✓ README.md                    → Dokumentasi lengkap
+✓ QUICK_START.md               → Instalasi cepat
+✓ database_update_photo.sql    → Update database (WAJIB!)
+
+PANDUAN FITUR BARU:
+✓ CARA_MELIHAT_FOTO.txt        → Cara upload & lihat foto
+✓ FITUR_JADWAL_MULTIPLE.txt    → Cara tambah jadwal multiple
+
+REFERENSI:
+✓ PANDUAN_SINGKAT.txt          → Panduan visual
+✓ CHANGELOG.md                 → Riwayat perubahan
+✓ INDEX_DOKUMENTASI.md         → Index semua dokumentasi
+✓ DOKUMENTASI_LENGKAP.txt      → Daftar lengkap dokumentasi
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ ⚡ QUICK START GUIDE                                                  │
+└───────────────────────────────────────────────────────────────────────┘
+
+UNTUK ADMIN:
+1. Login sebagai admin
+2. Kelola Data → Tambah Siswa, Guru, Kelas
+3. Jadwal Piket → Generate Otomatis atau Manual (Multiple!)
+4. Menu "Foto Absensi" → Lihat foto siswa
+
+UNTUK GURU:
+1. Login sebagai guru
+2. Monitoring → Pantau kehadiran siswa
+3. Menu "Foto Absensi" → Lihat foto kelas yang diampu
+4. Laporan → Generate laporan bulanan
+
+UNTUK SISWA:
+1. Login sebagai siswa
+2. Absensi Hadir → Upload Foto (opsional) → Absensi Sekarang
+3. Riwayat → Lihat history kehadiran
+4. Jadwal Saya → Lihat jadwal piket
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 🔧 TROUBLESHOOTING CEPAT                                              │
+└───────────────────────────────────────────────────────────────────────┘
+
+❌ Error: Connection Refused
+   → Pastikan Apache & MySQL running di XAMPP
+   → Restart Apache & MySQL
+
+❌ Error: Table doesn't exist
+   → Import database: epiket_smekda.sql
+   → Jalankan: database_update_photo.sql
+
+❌ Foto tidak muncul
+   → Pastikan sudah jalankan query update database
+   → Cek folder uploads/attendance/ ada
+
+❌ Menu "Foto Absensi" tidak ada
+   → Refresh browser (Ctrl + F5)
+   → Clear cache browser
+
+Untuk troubleshooting lengkap, baca: README.md (bagian Troubleshooting)
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 💡 TIPS PENTING                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+1. ✅ WAJIB jalankan database_update_photo.sql
+2. ✅ Ubah password default setelah instalasi
+3. ✅ Backup database secara berkala
+4. ✅ Gunakan Chrome/Firefox untuk performa terbaik
+5. ✅ Upload foto max 5MB (JPG/PNG)
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 📞 BUTUH BANTUAN?                                                     │
+└───────────────────────────────────────────────────────────────────────┘
+
+1. Baca FAQ di README.md
+2. Cek PANDUAN_SINGKAT.txt
+3. Email: support@smkn2sby.sch.id
+4. Website: https://smkn2sby.sch.id
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 📋 CHECKLIST INSTALASI                                                │
+└───────────────────────────────────────────────────────────────────────┘
+
+[ ] XAMPP terinstall dan running
+[ ] Folder di C:\xampp\htdocs\E-piket-smekda
+[ ] Database epiket_smekda sudah dibuat
+[ ] File epiket_smekda.sql sudah diimport
+[ ] Query database_update_photo.sql sudah dijalankan
+[ ] Bisa akses http://localhost/E-piket-smekda
+[ ] Bisa login dengan akun default
+[ ] Password default sudah diubah
+
+Jika semua checklist ✓, instalasi berhasil! 🎉
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ 🎯 LANGKAH SELANJUTNYA                                                │
+└───────────────────────────────────────────────────────────────────────┘
+
+1. Baca README.md untuk dokumentasi lengkap
+2. Pelajari CARA_MELIHAT_FOTO.txt untuk fitur foto
+3. Pelajari FITUR_JADWAL_MULTIPLE.txt untuk jadwal
+4. Explore aplikasi dan coba semua fitur
+5. Baca CHANGELOG.md untuk update terbaru
+
+┌───────────────────────────────────────────────────────────────────────┐
+│ ⭐ FITUR UNGGULAN                                                     │
+└───────────────────────────────────────────────────────────────────────┘
+
+✨ Modern UI dengan gradient design
+✨ Responsive (mobile & desktop)
+✨ Upload foto absensi
+✨ Jadwal multiple siswa
+✨ Generate jadwal otomatis
+✨ Laporan lengkap
+✨ Real-time monitoring
+✨ Secure & fast
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║  Terima kasih telah menggunakan E-Piket SMEKDA! 🙏                   ║
+║                                                                       ║
+║  Jika ada pertanyaan, jangan ragu untuk menghubungi kami.            ║
+║  Selamat menggunakan! 🚀                                              ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+Version: 1.1.0
+Release: Desember 2024
+Status: Production Ready ✅
+
+Developed with ❤️ by Tim Pengembang SMKN 2 Surabaya

@@ -1,0 +1,64 @@
+=====================================
+FITUR BARU: TAMBAH JADWAL MULTIPLE
+=====================================
+
+✅ SELESAI! Sekarang bisa menambahkan banyak siswa sekaligus!
+
+CARA MENGGUNAKAN:
+=================
+
+1. Login sebagai Admin
+2. Buka menu "Jadwal Piket"
+3. Klik tombol "Tambah Jadwal Manual"
+4. Pilih Kelas
+5. Pilih Tanggal (contoh: Senin, 2 Desember 2024)
+6. Pilih Shift (Pagi/Siang)
+7. CENTANG SISWA yang akan piket (bisa lebih dari 1!)
+   - Contoh: Centang 5 siswa untuk hari Senin
+8. Klik "Simpan Jadwal"
+
+FITUR TAMBAHAN:
+===============
+
+✓ Tombol "Pilih Semua" - Centang semua siswa sekaligus
+✓ Tombol "Batal Semua" - Hapus semua centangan
+✓ Checkbox untuk setiap siswa
+✓ Tampilan NIS dan Nama siswa
+✓ Deteksi duplikat otomatis
+✓ Notifikasi berapa siswa berhasil dijadwalkan
+
+CONTOH PENGGUNAAN:
+==================
+
+Skenario: Hari Senin ada 5 siswa piket
+
+Cara Lama (Satu-satu):
+- Input siswa 1 → Simpan
+- Input siswa 2 → Simpan
+- Input siswa 3 → Simpan
+- Input siswa 4 → Simpan
+- Input siswa 5 → Simpan
+Total: 5x input!
+
+Cara Baru (Sekaligus):
+- Pilih tanggal: Senin
+- Centang 5 siswa sekaligus
+- Klik Simpan
+Total: 1x input! ✨
+
+NOTIFIKASI:
+===========
+
+✓ Sukses: "Berhasil menambahkan 5 jadwal piket!"
+⚠ Warning: "Berhasil menambahkan 3 jadwal. 2 siswa sudah terjadwal: Budi, Ani"
+✗ Error: "Semua siswa sudah terjadwal di tanggal dan shift yang sama!"
+
+KEUNTUNGAN:
+===========
+
+✓ Lebih cepat (tidak perlu input satu-satu)
+✓ Lebih efisien (1x klik untuk banyak siswa)
+✓ Lebih praktis (bisa pilih semua sekaligus)
+✓ Tidak ada duplikat (sistem cek otomatis)
+
+=====================================
